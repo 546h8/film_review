@@ -1,0 +1,38 @@
+.header{
+  box-sizing:border-box ;
+  padding: 0 50px;
+  background-color: #000;
+  height:80px;
+  width:100vw;
+  z-index:100;
+  position:fixed;
+  display:flex;
+  align-items: center;
+  &__content{
+    display: flex;
+    justify-content:space-between;
+    width:100%;
+    &__left{
+      &__logo{
+        color:#ffffff;
+        font-family: Md_Gothic11;
+        font-size:40px;
+      }
+    }
+    &__right{
+      display: flex;
+      align-items: center;
+      &__searchArea{
+        &__textBox{
+          width:300px;
+          height:30px;
+          padding:0 5px;
+        }
+        &__button{
+          color:white;
+          width:20px;
+        }
+      }
+    }
+  }
+}
