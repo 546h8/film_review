@@ -8,6 +8,7 @@
   position:fixed;
   display:flex;
   align-items: center;
+  top:0;
   &__content{
     display: flex;
     justify-content:space-between;
@@ -31,6 +32,10 @@
         &__button{
           color:white;
           width:20px;
+          padding-left:5px;
+        }
+        &__button:hover{
+          opacity:0.5;
         }
       }
     }
