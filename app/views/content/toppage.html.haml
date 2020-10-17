@@ -1,4 +1,33 @@
 %body
   =render partial: 'header'
   =render partial: 'descriptionImage'
+
+  .main
+    %ul.main__image
+      %li.main__image__leftArea
+        .main__image__leftArea__center
+          .main__image__leftArea__center__backgroundImage
+            =image_tag 'description/photo-1512113569142-8a60fccc7caa.jpeg', alt: 'mainImageLeft', class: 'main__image__leftArea__center__backgroundImage__image'
+
+      %li.main__image__rightArea
+        %ul
+          %li.main__image__rightArea__top
+            %ul
+
+              %li.main__image__rightArea__top__left
+                .main__image__rightArea__top__left__backgroundImage
+                  =image_tag 'description/photo-1579702493440-8b1b56d47e03.jpeg',alt:'main__image__rightArea__top__left__backgroundImage__image',class:'main__image__rightArea__top__left__backgroundImage__image'
+
+
+              %li.main__image__rightArea__top__right
+                .main__image__rightArea__top__right__backgroundImage
+                  =image_tag 'description/astronaut-4106766_1920.jpg',alt:'main__image__rightArea__top__right__backgroundImage__image',class:'main__image__rightArea__top__right__backgroundImage__image'
+            
+          %li.main__image__rightArea__bottom
+            .main__image__rightArea__bottom__backgroundImage
+              =image_tag 'description/photo-1598827510504-b204c095f5cb (1).jpeg',alt:'main__image__rightArea__bottom__backgroundImage__image',class:'main__image__rightArea__bottom__backgroundImage__image'
+
+
+
+
   
