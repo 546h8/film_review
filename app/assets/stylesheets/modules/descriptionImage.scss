@@ -1,0 +1,34 @@
+.descriptionImageArea{
+  box-sizing: border-box;
+  margin-top:80px;
+  position: relative;
+  &__backgroundImage{
+    background-size: 100% auto;
+    background-image: url("description/photo-1585951237318-9ea5e175b891-7b7f2151886ecc66dab0204b7a653d23066a38cfdaa14cb95272a740b84c77a8.jpg");
+    background-repeat: no-repeat;
+
+    &__blurImage{
+      width: 100%;
+      height: auto;
+      opacity:0;
+      backface-visibility: hidden;
+      -webkit-filter:blur(8px);
+      filter: blur(8px);
+      
+      &__text{
+        color:#ffffff;
+        text-shadow: 0 0 1px;
+        font-size:35px;
+        line-height: 1.5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position:absolute;
+        margin:20% 100px;
+
+        top:0;
+      }
+    }
+  }
+}
+
