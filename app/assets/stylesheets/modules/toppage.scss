@@ -7,7 +7,8 @@
   &__image{
     box-sizing: border-box;
     display: flex;
-    flex-wrap:wrap;
+    // flex-wrap:wrap;
+    text-align: left;
     &__leftArea{
       width: 44%;
       &__center{
@@ -24,27 +25,35 @@
     &__rightArea{
       width:66%;
       &__top{
-        display: flex;
-        flex-wrap: wrap;
-
-        &__left{
-          &__backgroundImage{
-            
-            img{
-              width:33%;
-              // height:calc( 100% - 45%);
+        ul{
+          display: flex;
+          // flex-wrap: wrap;
+          &__left{
+            width:33%;
+            &__backgroundImage{
+              width:100%;
+              image{
+                width: 100%;
+              }
+              img{
+                width:100%;
+                // height:calc( 100% - 45%);
+              }
             }
           }
-        }
 
-        &__right{
-          &__backgroundImage{
-            // &__image{
-            // }
-            img{
-              left:0;
-              width:33%;
-              // height:calc( 100% - 45%);
+          &__right{
+            width:33%;
+            &__backgroundImage{
+              width:100%;
+              &__image{
+                width:100%;
+              }
+              img{
+                left:0;
+                width:100%;
+                // height:calc( 100% - 45%);
+              }
             }
           }
         }
