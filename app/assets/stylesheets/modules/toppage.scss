@@ -7,65 +7,117 @@
   &__image{
     box-sizing: border-box;
     display: flex;
-    // flex-wrap:wrap;
     text-align: left;
     &__leftArea{
-      width: 44%;
+      width: calc(100vw - 55% );
+      height: 100vh;
       &__center{
         &__backgroundImage{
-        }
-          image{
-            width:100%;
+          background-size: 100% 100vh;
+          background-image: url("description/photo-1512113569142-8a60fccc7caa-cbdd967dc3e3077615c65f22b257d44d4651ed57be020328e16b67e22afe6e8d.jpg");
+          background-repeat: no-repeat;
+          .main__image__leftArea__center__backgroundImage__blurImage{
+            width: 100%;
+            height: 100vh;
+            opacity:0;
+            backface-visibility: hidden;
+            -webkit-filter:blur(8px);
+            filter: blur(8px);
           }
           img{
             width:100%;
+            height:100vh;
           }
+        }
       }
     }
     &__rightArea{
-      width:66%;
-      &__top{
-        ul{
-          display: flex;
-          // flex-wrap: wrap;
-          &__left{
-            width:33%;
-            &__backgroundImage{
-              width:100%;
-              image{
+      width:calc(100vw - 45%);
+      height:100vh;
+      ul{
+        height:100vh;
+        .main__image__rightArea__top{
+          height:calc(100vh - 45%);
+          ul{
+            width:100%;
+            display: flex;
+            height:100% ;
+            
+            .main__image__rightArea__top__left{
+              width: 50%;
+              height:100%;
+              .main__image__rightArea__top__left__backgroundImage{
+                background-size: 100% 100%;
+                background-image: url("description/photo-1579702493440-8b1b56d47e03-f1f080a0e6eaa2f00f77cce802efcfd9f4e1ddb6d27fe6a5447245adeca53bdc.jpg");
+                background-repeat: no-repeat;
                 width: 100%;
-              }
-              img{
-                width:100%;
-                // height:calc( 100% - 45%);
+                height: 100%;
+
+                .main__image__rightArea__top__left__backgroundImage__blurImage{
+                  width: 100%;
+                  height:100%;
+                  opacity:0;
+                  backface-visibility: hidden;
+                  -webkit-filter:blur(8px);
+                  filter: blur(8px);
+                }
+                img{
+                  width:100%;
+                  height:100%;
+                }
               }
             }
-          }
 
-          &__right{
-            width:33%;
-            &__backgroundImage{
-              width:100%;
-              &__image{
+            .main__image__rightArea__top__right{
+              width:50%;
+              height:100%;
+              .main__image__rightArea__top__right__backgroundImage{
                 width:100%;
-              }
-              img{
-                left:0;
-                width:100%;
-                // height:calc( 100% - 45%);
+                height:100%;
+                background-size: 100% 100%;
+                background-image: url("description/astronaut-4106766_1920-52927e3a5e6fbfc8d1be534a053f0c91f84fa2d65705c51c1995e2eab87150ca.jpg");
+                background-repeat: no-repeat;
+                .main__image__rightArea__top__right__backgroundImage__blurImage{
+                  width: 100%;
+                  height:100%;
+                  opacity:0;
+                  backface-visibility: hidden;
+                  -webkit-filter:blur(8px);
+                  filter: blur(8px);
+                }
+                img{
+                  width:100%;
+                  height:100%;
+                }
               }
             }
           }
         }
-      }
+      
 
 
-      &__bottom{
-        &__backgroundImage{
-          // &__image{
-          // }
-          img{
-
+        .main__image__rightArea__bottom{
+          width:100%;
+          height:calc(100vh - 55%);
+          position: relative;
+          .main__image__rightArea__bottom__backgroundImage{
+            width:100%;
+            height:100%;
+            background-size: 100% 100%;
+            background-image: url("description/photo-1598827510504-b204c095f5cb-3b4b9b4b6d98ee5b99ebc74833eedfd329e0f051762dee9c40eef84c2397dddb.jpg");
+            background-repeat: no-repeat;
+            .main__image__rightArea__bottom__backgroundImage__blurImage{
+              width: 100%;
+              height:100%;
+              opacity:0;
+              backface-visibility: hidden;
+              -webkit-filter:blur(8px);
+              filter: blur(8px);
+            }
+            img{
+              width:100%;
+              height:100%;
+            }
           }
         }
       }
