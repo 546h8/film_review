@@ -1,9 +1,12 @@
 .main{
   box-sizing: border-box;
-  width:100vw;
-  height:100vh;
+  // width:100vw;
+  // height:100vh;
   margin-top:-7px;
   vertical-align: top;
+  background-color:#111111;
+
+
   &__image{
     box-sizing: border-box;
     display: flex;
@@ -128,3 +131,4 @@
 li{
   list-style: none;
 }
+
