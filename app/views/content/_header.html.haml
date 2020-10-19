@@ -1,8 +1,9 @@
 .header
   .header__content
     .header__content__left
-      .header__content__left__logo
-        FilmReview
+      =link_to "#" do
+        .header__content__left__logo
+          FilmReview
     .header__content__right
       .header__content__right__searchArea
         %input{type:"text",id:"search",class: "header__content__right__searchArea__textBox",placeholder:"キーワードを検索"}
