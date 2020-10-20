@@ -1,5 +1,6 @@
   class CreateContents < ActiveRecord::Migration[6.0]
     def change
+      has_many :genre
       create_table :content do |t|
         t.datetime :screening_date,   null: false
         t.datetime :production_date,  null: false
