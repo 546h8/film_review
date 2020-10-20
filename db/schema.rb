@@ -31,7 +31,6 @@ ActiveRecord::Schema.define(version: 2020_10_20_061519) do
     t.string "title", null: false
     t.bigint "director_id", null: false
     t.bigint "screening_date_id", null: false
-    t.datetime "production_date", null: false
     t.integer "screening_time", null: false
     t.string "synopsis", null: false
     t.string "impressions", null: false
