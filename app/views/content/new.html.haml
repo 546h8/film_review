@@ -1,3 +1,50 @@
-= form_with url: @content ,id: "new__content__form"  ,local: true do |f|
+.new
+  .new__contents
+  = form_with model: @content ,id: "new__content__form"  ,local: true do |f|
+    .new__contents__title
+      =f.text_field :title ,class: "new__input" ,placeholder: "映画タイトル"
 
-  = f.file_field :image, type;'file', value: "",style; "display:none", id:"img-file"
+    .new__contents__file
+      .new__contents__file__image
+        .new__contents__file__image__previewArea
+          %img{id: "img_preview" ,width:390,height:250}
+          .new__contents__file__image__previewArea__position
+            %label{for:"img-file"}
+              %i.fas.fa-camera
+
+        .new__contents__file__image__inputArea
+          =f.file_field :image,type: 'file',value: "" ,style:"" ,id: "img-file"
+            
+            
+      
+      .new__contents__file__embed_code
+        .new__contents__file__embed_code__previewArea
+          %img{id: "embed_preview",width:390,height:250}
+          .new__contents__file__embed_code__previewArea__position
+            %i.fas.fa-film
+
+        .new__contents__file__embed__code__inputArea
+          =f.text_field :embed_code ,class: "new__input__embed",id: "embed-file" ,placeholder: "動画埋め込みコード"
+            
+
+
+    .new__contents__directror
+      =f.text_field :director,class: "new__input",placeholder: "映画監督"
+
+    .new__contents__actor
+      =f.text_field :actor ,class: "new__input",placeholder: "俳優名"
+
+    .new__contents__screening_date
+      =f.text_field :screening_date ,class: "new__input",placeholder: "上映日"
+
+    .new__contents__screening_time
+      =f.text_field :screening_time ,class: "new__input",placeholder: "上映時間"
+    
+    .new__contents__URL
+      =f.text_field :URL ,class: "new__input",placeholder: "映画評価外部URL"
+
+    .new__contents__impressions
+      =f.text_field :impressions ,class: "new__input",placeholder: "感想"
+
+
+

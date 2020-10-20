@@ -1,6 +1,18 @@
 class ContentController < ApplicationController
   # before_action :set_content.only: [:director, :actor, :screeningDate, :genre]
   
+    def new
+    content = Content.new
+    end
+  
+    def create
+    
+    end
+  
+    def show
+  
+    end
+  
   # def toppage
   # end
 
@@ -20,14 +32,5 @@ class ContentController < ApplicationController
   # def genre
   #   @movie = movie.all
   # end
-
-
-  def new
-    @content = Content.new
-  end
-
-  def create
-    
-  end
 
 end
