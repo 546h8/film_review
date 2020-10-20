@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2020_10_20_061519) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "content", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+  create_table "contents", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "title", null: false
     t.bigint "director_id", null: false
     t.bigint "screening_date_id", null: false
@@ -40,8 +40,8 @@ ActiveRecord::Schema.define(version: 2020_10_20_061519) do
     t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["director_id"], name: "index_content_on_director_id"
-    t.index ["screening_date_id"], name: "index_content_on_screening_date_id"
+    t.index ["director_id"], name: "index_contents_on_director_id"
+    t.index ["screening_date_id"], name: "index_contents_on_screening_date_id"
   end
 
   create_table "directors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|

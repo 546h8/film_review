@@ -9,6 +9,4 @@ class Content < ApplicationRecord
 
   belongs_to :screeningdate
 
-
-
 end
