@@ -13,15 +13,19 @@
     text-align: left;
     &__leftArea{
       width: calc(100vw - 55% );
-      height: 100vh;
+      height: auto;
       &__center{
+        width:100%;
+        height:100%;
         &__backgroundImage{
-          background-size: 100% 100vh;
+          width:100%;
+          height:100%;
+          background-size: 100% 100%;
           background-image: url("description/photo-1512113569142-8a60fccc7caa-cbdd967dc3e3077615c65f22b257d44d4651ed57be020328e16b67e22afe6e8d.jpg");
           background-repeat: no-repeat;
           .main__image__leftArea__center__backgroundImage__blurImage{
             width: 100%;
-            height: 100vh;
+            height: 100%;
             opacity:0;
             backface-visibility: hidden;
             -webkit-filter:blur(8px);
@@ -29,33 +33,34 @@
           }
           img{
             width:100%;
-            height:100vh;
+            height:100%;
           }
         }
       }
     }
     &__rightArea{
       width:calc(100vw - 45%);
-      height:100vh;
+      height: calc(100vw - 55% );
+      // height:10px;
       ul{
-        height:100vh;
+        width:100%;
+        height:100%;
         .main__image__rightArea__top{
-          height:calc(100vh - 45%);
+          width:100%;
+          height:100%;
           ul{
             width:100%;
-            display: flex;
             height:100% ;
-            
+            display: flex;
             .main__image__rightArea__top__left{
               width: 50%;
               height:100%;
               .main__image__rightArea__top__left__backgroundImage{
+                width: 100%;
+                height: 100%;
                 background-size: 100% 100%;
                 background-image: url("description/photo-1579702493440-8b1b56d47e03-f1f080a0e6eaa2f00f77cce802efcfd9f4e1ddb6d27fe6a5447245adeca53bdc.jpg");
                 background-repeat: no-repeat;
-                width: 100%;
-                height: 100%;
-
                 .main__image__rightArea__top__left__backgroundImage__blurImage{
                   width: 100%;
                   height:100%;
