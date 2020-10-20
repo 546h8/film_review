@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   root 'content#toppage'
   resources :content
   resources :gemre
+  resources :director
+  resources :actor
+  resources :screening_date
+
 
 
   
