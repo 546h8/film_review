@@ -23,7 +23,11 @@ class ContentController < ApplicationController
 
 
   def new
-    @content = content.new
+    @content = Content.new
+  end
+
+  def create
+    
   end
 
 end
