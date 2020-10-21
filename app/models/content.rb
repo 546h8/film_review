@@ -4,8 +4,8 @@ class Content < ApplicationRecord
 
   belongs_to :director
 
-  has_many :actor 
-  has_many :actor ,through: :actor_contents
+  has_many :actors
+  has_many :actors ,through: :actor_contents
 
   belongs_to :screeningdate
 

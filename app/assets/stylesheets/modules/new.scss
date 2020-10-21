@@ -1,13 +1,30 @@
 .new{
   background-color:#111111;
-  // background-color:rgb(30,30,40);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'M PLUS 1p', sans-serif;
+  color:#ffffff;
+  text-align: center;
+
   padding:  130px 100px;
-  
+  &__title{
+    color:#ffffff;
+    font-size:30px;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 70px;
+    border-bottom: double 2px #ffffff;
+    width:200px;
+    // font-family: 'M PLUS 1p', sans-serif;
+
+  }
   
   &__contents{
     padding: 0 100px;
     &__file{
       display: flex;
+      justify-content: center;
       &__image{
         margin-right:20px;
         &__previewArea{
@@ -18,22 +35,28 @@
           }
         }
         &__inputArea{
-          color:white;
-          font-family: Helvetica, Arial, sans-serif;
-          font-weight:500;
-          font-size: 18px;
-          border-radius: 5px;
-          line-height: 22px;
-          background-color: transparent;
-          border:2px solid #CC6666;
-          transition: all 0.3s;
-          padding: 7px;
-          margin-bottom: 15px;
-          width:100%;
-          box-sizing: border-box;
-          outline:0;
-          width:390px;
-          // display: none;
+          &__clear{
+            display: none;
+          }
+          &__file{
+            color:#808080;
+            font-family: Helvetica, Arial, sans-serif;
+            font-weight:500;
+            font-size: 18px;
+            border-radius: 5px;
+            background-color: transparent;
+            border:2px solid #CC6666;
+            transition: all 0.3s;
+            align-items: center;
+            padding:10px ;
+            width:100%;
+            box-sizing: border-box;
+            outline:0;
+            width:390px;
+            height:52px;
+            top:-20px;
+            position: relative;
+          }
         }
       }
       &__embed_code{
@@ -47,11 +70,49 @@
         }
       }
     }
+    &__genre{
+      margin-bottom:70px;
+      max-width: 800px;
+      &__formBox{
+        padding-top:20px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        .genreBox{
+          display: flex;
+          font-size: 14px;
+          label{
+            display: flex; 
+            margin: 5px;
+            width: 190px;
+            height: 80px;
+            text-align: center;
+            line-height: 45px;
+            padding-left: 5px;
+            padding-right: 5px;
+            cursor: pointer;
+            color: #ffffff;
+            border: 2px solid  #CC6666;
+            border-radius: 5px;
+            align-items: center;
+            justify-content: center;
+          }
+          label:hover{
+            opacity: 0.5;
+          }
+          input[type="checkbox"]:checked + label{
+            background-color:#ff6347;
+            color: #ffffff;
+          }
+        }
+      }
+
+    }
   }
 }
 
 .new__input{
-  color:white;
+  color:#ffffff;
   font-family: Helvetica, Arial, sans-serif;
   font-weight:500;
   font-size: 18px;
@@ -61,11 +122,13 @@
   border:2px solid #CC6666;
   transition: all 0.3s;
   padding: 13px;
-  margin-bottom: 15px;
+  margin-bottom: 50px;
   width:100%;
   box-sizing: border-box;
   outline:0;
   width:800px;
+  font-family: 'M PLUS 1p', sans-serif;
+
 }
 
 .new__input__embed{
@@ -79,11 +142,34 @@
   border:2px solid #CC6666;
   transition: all 0.3s;
   padding: 13px;
-  margin-bottom: 15px;
+  margin-bottom: 50px;
   width:100%;
   box-sizing: border-box;
   outline:0;
   width:390px;
+  top:-20px;
+  position: relative;
+  font-family: 'M PLUS 1p', sans-serif;
+}
+
+.new__input__textArea{
+  color:#ffffff;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid #CC6666;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 50px;
+  box-sizing: border-box;
+  outline:0;
+  width:800px;
+  font-family: 'M PLUS 1p', sans-serif;
+  height:300px;
+  resize: none;
 }
 
 .new__input:focus{
@@ -93,4 +179,8 @@
 i{
   color: white;
   font-size:20px;
+}
+
+input[type="checkbox"]{
+  display: none;
 }

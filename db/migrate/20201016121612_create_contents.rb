@@ -8,9 +8,10 @@ class CreateContents < ActiveRecord::Migration[6.0]
       t.integer    :screening_time,   null: false  ,presence: true
       t.string     :synopsis,         null: false  ,presence: true
       t.string     :impressions,      null: false  ,presence: true
-      t.string     :URL
+      t.string     :external_url
       t.string     :embed_code
       t.string     :image
+      t.float      :rating
       t.timestamps
     end
   end
