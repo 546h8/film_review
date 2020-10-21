@@ -34,9 +34,10 @@ ActiveRecord::Schema.define(version: 2020_10_20_061519) do
     t.integer "screening_time", null: false
     t.string "synopsis", null: false
     t.string "impressions", null: false
-    t.string "URL"
+    t.string "external_url"
     t.string "embed_code"
     t.string "image"
+    t.float "rating"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["director_id"], name: "index_contents_on_director_id"
