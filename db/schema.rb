@@ -12,28 +12,28 @@
 
 ActiveRecord::Schema.define(version: 2020_10_20_061519) do
 
-  create_table "actor_contents", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.bigint "actor_id", null: false
-    t.bigint "title_id", null: false
+  create_table "actor_contents", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "actor_id"
+    t.bigint "title_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["actor_id"], name: "index_actor_contents_on_actor_id"
     t.index ["title_id"], name: "index_actor_contents_on_title_id"
   end
 
-  create_table "actors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.string "actor", null: false
+  create_table "actors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "actor"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "contents", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.string "title", null: false
-    t.bigint "director_id", null: false
-    t.bigint "screening_date_id", null: false
-    t.integer "screening_time", null: false
-    t.string "synopsis", null: false
-    t.string "impressions", null: false
+  create_table "contents", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "title"
+    t.bigint "director_id"
+    t.bigint "screening_date_id"
+    t.integer "screening_time"
+    t.string "synopsis"
+    t.string "impressions"
     t.string "external_url"
     t.string "embed_code"
     t.string "image"
@@ -44,29 +44,29 @@ ActiveRecord::Schema.define(version: 2020_10_20_061519) do
     t.index ["screening_date_id"], name: "index_contents_on_screening_date_id"
   end
 
-  create_table "directors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.string "director", null: false
+  create_table "directors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "director"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "genre_contents", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.bigint "title_id", null: false
-    t.bigint "genre_id", null: false
+  create_table "genre_contents", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "title_id"
+    t.bigint "genre_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["genre_id"], name: "index_genre_contents_on_genre_id"
     t.index ["title_id"], name: "index_genre_contents_on_title_id"
   end
 
-  create_table "genres", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.string "genre", null: false
+  create_table "genres", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "genre"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "screeningdates", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.datetime "screening_date", null: false
+  create_table "screeningdates", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "screening_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
