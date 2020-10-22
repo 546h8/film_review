@@ -106,7 +106,29 @@
           }
         }
       }
-
+    }
+    %__rating{
+      .btnspinner{
+        -ms-user-select: none;
+        -moz-user-select: -moz-none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
+      }
+      input .new__ratingInput{
+        padding: 11px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 18px;
+        width: auto;
+        vertical-align: middle;
+        /* デフォルトのスピナーを消す */
+        -webkit-appearance: none;
+        -moz-appearance:textfield;
+      }
+      input[type="button"] .new__ratingInput{
+        cursor:pointer;
+      }
     }
   }
   .new__form{

@@ -140,8 +140,17 @@
       .new__contents__screening_time
         =f.text_field :screening_time ,class: "new__input",placeholder: "上映時間"
       
-      .new__contents__URL
+      .new__contents__externalURL
         =f.text_field :url ,class: "new__input",placeholder: "映画評価外部URL"
+
+      .new__contents__rating
+        =f.text_field :rating, class:"new__ratingInput" ,placeholder: "評価点数(満点100)",value: "",max:"500" ,min:0
+        %input.btnSpinner{type: "button",value:"+", cal: "1" ,target:".counter1"}
+        %input.btnSpinner{type: "button",value:"-", cal: "-1" ,target:".counter1"}
+
+
+
+
 
       .new__contents__impressions
         =f.text_area :impressions ,class: "new__input__textArea",placeholder: "感想"
