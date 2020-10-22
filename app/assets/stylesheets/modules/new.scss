@@ -109,6 +109,26 @@
 
     }
   }
+  .new__form{
+    margin: 0px 16px 24px;
+
+    .new__formSubmit{
+      background-color: #cc3333;
+      color: #ffffff;
+      height: 50px;
+      width:800px;
+      font-size: 18px;
+    }
+    .new__form__back{
+      .new__form__back__link{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        font-size: 18px;;
+        color:#ffffff
+      }
+    }
+  }
 }
 
 .new__input{

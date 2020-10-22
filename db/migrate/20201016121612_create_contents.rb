@@ -1,13 +1,12 @@
 class CreateContents < ActiveRecord::Migration[6.0]
   def change
     create_table :contents do |t|
-      t.string     :title,            null: false  ,presence: true
-      t.references :director,         null: false  ,presence: true
-      t.references :screening_date,   null: false  ,presence: true
-      # t.datetime   :production_date,  null: false  ,presence: true
-      t.integer    :screening_time,   null: false  ,presence: true
-      t.string     :synopsis,         null: false  ,presence: true
-      t.string     :impressions,      null: false  ,presence: true
+      t.string     :title,            null: false  
+      t.references :director,         null: false 
+      t.references :screening_date,   null: false  
+      t.integer    :screening_time,   null: false  
+      t.string     :synopsis,         null: false  
+      t.string     :impressions,      null: false  
       t.string     :external_url
       t.string     :embed_code
       t.string     :image
