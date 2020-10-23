@@ -107,28 +107,56 @@
         }
       }
     }
-    %__rating{
-      .btnspinner{
+    &__rating{
+      margin-bottom: 50px;
+      .new__ratingInput{
+      }
+      input {
+        border-width: 1px;
+        border-left: none;
+        border-right: none;
+        border:2px solid #CC6666;
+        height: 50px;
+        border-radius: 5px;
+        -webkit-appearance: none;
+        -moz-appearance: textfield;
+      }
+      input:focus{
+        outline:0;
+        -webkit-appearance: none;
+        -moz-appearance:textfield;
+      }
+      input[type="number"]::-webkit-outer-spin-button,
+      input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;  //chromeとsafari標準のspinner削除
+        -moz-appearance:textfield; //firefoxとie標準のspinner削除
+      }
+      .btnSpinner{
+        width:50px;
+        padding: 6px 12px;
+        background-color: #CC6666;
+        border: 1px solid transparent;
+        color:#fff ;
         -ms-user-select: none;
         -moz-user-select: -moz-none;
         -khtml-user-select: none;
         -webkit-user-select: none;
         user-select: none;
       }
-      input .new__ratingInput{
-        padding: 11px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        font-size: 18px;
-        width: auto;
-        vertical-align: middle;
-        /* デフォルトのスピナーを消す */
-        -webkit-appearance: none;
-        -moz-appearance:textfield;
+      .btnSpinner:hover{
+        opacity:0.5;
       }
-      input[type="button"] .new__ratingInput{
-        cursor:pointer;
+      .btnSpinner:active{
+        background-color:#cc6633; 
+        border:none;
       }
+      .new__ratingInput{
+        width:680px;
+        padding: 13px;
+        background-color: #111111;
+        color: #fff;
+      }
+      
     }
   }
   .new__form{
