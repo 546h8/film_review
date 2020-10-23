@@ -143,18 +143,16 @@
       .new__contents__externalURL
         =f.text_field :url ,class: "new__input",placeholder: "映画評価外部URL"
 
-      .new__contents__rating
-        =f.text_field :rating, class:"new__ratingInput" ,placeholder: "評価点数(満点100)",value: "",max:"500" ,min:0
-        %input.btnSpinner{type: "button",value:"+", cal: "1" ,target:".counter1"}
-        %input.btnSpinner{type: "button",value:"-", cal: "-1" ,target:".counter1"}
-
-
-
-
 
       .new__contents__impressions
         =f.text_area :impressions ,class: "new__input__textArea",placeholder: "感想"
 
+
+      #counter.new__contents__rating
+        %input.btnSpinner{type: "button",value:"-",data:{ cal: "-1" ,target:".new__ratingInput"}}
+        %input.btnSpinner{type: "button",value:"+",data:{ cal: "1"  ,target:".new__ratingInput"}}
+        =f.number_field :rating, class:"new__ratingInput" ,placeholder: "評価点数(満点100)",value: "",data:{max:"100" ,min:0}
+        -# %h / 100
 
     .new__form
       =f.submit "保存する",class: "new__formSubmit new__all-submit"
