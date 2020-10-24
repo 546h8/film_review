@@ -10,30 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_20_061519) do
+ActiveRecord::Schema.define(version: 2020_10_20_054657) do
 
   create_table "actor_contents", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "actor_id"
-    t.bigint "title_id"
+    t.bigint "content_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["actor_id"], name: "index_actor_contents_on_actor_id"
-    t.index ["title_id"], name: "index_actor_contents_on_title_id"
+    t.index ["content_id"], name: "index_actor_contents_on_content_id"
   end
 
   create_table "actors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "actor"
+    t.string "actor", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "contents", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "title"
+    t.string "title", null: false
     t.bigint "director_id"
-    t.bigint "screening_date_id"
-    t.integer "screening_time"
-    t.string "synopsis"
-    t.string "impressions"
+    t.bigint "screeningdate_id"
+    t.integer "screeningtime", null: false
+    t.string "synopsis", null: false
+    t.string "impressions", null: false
     t.string "external_url"
     t.string "embed_code"
     t.string "image"
@@ -41,34 +41,40 @@ ActiveRecord::Schema.define(version: 2020_10_20_061519) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["director_id"], name: "index_contents_on_director_id"
-    t.index ["screening_date_id"], name: "index_contents_on_screening_date_id"
+    t.index ["screeningdate_id"], name: "index_contents_on_screeningdate_id"
   end
 
   create_table "directors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "director"
+    t.string "director", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "genre_contents", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "title_id"
     t.bigint "genre_id"
+    t.bigint "content_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["content_id"], name: "index_genre_contents_on_content_id"
     t.index ["genre_id"], name: "index_genre_contents_on_genre_id"
-    t.index ["title_id"], name: "index_genre_contents_on_title_id"
   end
 
   create_table "genres", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "genre"
+    t.string "genre", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "screeningdates", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.datetime "screening_date"
+    t.datetime "screeningdate", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "actor_contents", "actors"
+  add_foreign_key "actor_contents", "contents"
+  add_foreign_key "contents", "directors"
+  add_foreign_key "contents", "screeningdates"
+  add_foreign_key "genre_contents", "contents"
+  add_foreign_key "genre_contents", "genres"
 end
