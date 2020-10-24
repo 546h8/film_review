@@ -21,7 +21,7 @@ $(function(){
         if(!arySpinnerCtrl['interval'] && arySpinnerCtrl['timestamp'] == e.timeStamp){
           arySpinnerCtrl['interval'] = setInterval(spinnerCal, spin_speed);
         }
-      }, 500);
+      }, 100);
     });
     
     //長押し解除時 画面スクロールも解除に含む
