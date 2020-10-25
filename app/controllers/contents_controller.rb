@@ -14,14 +14,15 @@ class ContentsController < ApplicationController
   end
 
   def create
-  Content.create(content_params)
-    # if @content.save
-    #   # user_id << current_user
+    Content.create(content_params)
+    
+      # if @content.save
+      #   # user_id << current_user
 
-    #   redirect_to root_path
-    # else
-    #     render 'new'
-    # end
+      #   redirect_to root_path
+      # else
+      #     render 'new'
+      # end
   end
 
   def show
@@ -30,7 +31,21 @@ class ContentsController < ApplicationController
 
 private
   def content_params
-    params.require(:content).permit(:id, :title, :director, :screening_date , :screening_time , :genre ,:synopsis, :impressions, :external_url, :embed_code, :image, :rating)
+    params.require(:content).permit(
+      :id, 
+      :title,
+      :director,
+      :actor ,
+      :screeningdate ,
+      :screeningtime ,
+      :genre ,
+      :synopsis,
+      :impressions,
+      :external_url,
+      :embed_code,
+      :image,
+      :rating
+    )
   end
 
 
