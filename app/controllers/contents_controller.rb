@@ -34,7 +34,7 @@ private
     params.require(:content).permit(
       :id, 
       :title,
-      :director,
+      # :director,
       :actor ,
       :screeningdate ,
       :screeningtime ,
@@ -44,7 +44,8 @@ private
       :external_url,
       :embed_code,
       :image,
-      :rating
+      :rating,
+      :director_ids
     )
   end
 

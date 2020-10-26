@@ -131,6 +131,11 @@
       .new__contents__directror
         =f.text_field :director,class: "new__input",placeholder: "映画監督"
 
+      -# .new__contents__directror
+      -#   =f.object.selectable_director.each do |director|
+      -#     =f.label :director_ids,value: director.id do
+      -#       =f.text_field :director,class: "new__input",placeholder: "映画監督"
+
       .new__contents__actor
         =f.text_field :actor ,class: "new__input",placeholder: "俳優名"
 
