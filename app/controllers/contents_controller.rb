@@ -11,10 +11,13 @@ class ContentsController < ApplicationController
 
   def new
   @content = Content.new  
+  @content.actor_contents.build
   end
 
   def create
     Content.create(content_params)
+    redirect_to root_path
+
     
       # if @content.save
       #   # user_id << current_user
@@ -34,18 +37,24 @@ private
     params.require(:content).permit(
       :id, 
       :title,
-      # :director,
-      :actor ,
-      :screeningdate ,
+      :director_id,
+      :screeningdate_id ,
       :screeningtime ,
-      :genre ,
       :synopsis,
       :impressions,
       :external_url,
       :embed_code,
       :image,
       :rating,
-      :director_ids
+      actor_content_attributes: [
+        :actor_id
+      ],
+      genre_content_attributes:[
+        :genre_id
+      ],
+      genre_attributes:[
+        :genre
+      ]
     )
   end
 

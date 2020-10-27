@@ -22,18 +22,18 @@ ActiveRecord::Schema.define(version: 2020_10_20_054657) do
   end
 
   create_table "actors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "actor", null: false
+    t.string "actor"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "contents", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "title", null: false
+    t.string "title"
     t.bigint "director_id"
     t.bigint "screeningdate_id"
-    t.integer "screeningtime", null: false
-    t.string "synopsis", null: false
-    t.string "impressions", null: false
+    t.integer "screeningtime"
+    t.string "synopsis"
+    t.string "impressions"
     t.string "external_url"
     t.string "embed_code"
     t.string "image"
@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 2020_10_20_054657) do
   end
 
   create_table "directors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "director", null: false
+    t.string "director"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -60,13 +60,13 @@ ActiveRecord::Schema.define(version: 2020_10_20_054657) do
   end
 
   create_table "genres", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "genre", null: false
+    t.string "genre"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "screeningdates", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.datetime "screeningdate", null: false
+    t.datetime "screeningdate"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -1,4 +1,4 @@
 class ActorContent < ApplicationRecord
-  belongs_to :content
-  belongs_to :actor
+  belongs_to :content, optional: true
+  belongs_to :actor, optional: true
 end
