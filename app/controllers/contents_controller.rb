@@ -11,11 +11,12 @@ class ContentsController < ApplicationController
 
   def new
   @content = Content.new  
-  @content.actor_contents.build
+  # @content.actor_contents.build
   end
 
   def create
-    Content.create(content_params)
+    @content.create(content_params)
+    @content.actor_contents.build
     redirect_to root_path
 
     
