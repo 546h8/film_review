@@ -2,7 +2,7 @@
   .new__title
     %h2
       新規登録画面
-  =form_with model:@content,id:"new__content__form",local:true do |f|
+  =form_with model:@content, id:"new__content__form",local:true do |f|
     .new__contents
       .new__contents__title
         =f.text_field :title ,class: "new__input" ,placeholder: "映画タイトル"

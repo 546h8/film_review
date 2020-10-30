@@ -10,13 +10,16 @@ class ContentsController < ApplicationController
   end
 
   def new
-  @content = Content.new  
-  # @content.actor_contents.build
+  @content = Content.new
+  @content.actor_contents.build
   end
 
   def create
-    @content.create(content_params)
-    @content.actor_contents.build
+    @content = Content.new(content_params)
+
+
+    # @content.create(content_params)
+    # @content.actor_contents.build
     redirect_to root_path
 
     
@@ -48,14 +51,17 @@ private
       :image,
       :rating,
       actor_content_attributes: [
-        :actor_id
+        :id,
+        :actor_id,
       ],
-      genre_content_attributes:[
-        :genre_id
-      ],
-      genre_attributes:[
-        :genre
-      ]
+      # genre_content_attributes:[
+      #   :id,
+      #   :genre_id,
+      # ],
+      # genre_attributes:[
+      #   :id,
+      #   :genre,
+      # ]
     )
   end
 
